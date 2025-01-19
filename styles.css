@@ -1,0 +1,106 @@
+/* Main container */
+.dashboard {
+    display: flex; /* Flexbox for sidebar and main content */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+  }
+
+  .dash-main {
+    flex: 1; /* Take up the remaining space */
+    display: flex;
+    flex-direction: column; /* Stack heading and square */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    background-color: #98b792; /* Greenish background */
+  }
+  
+  /* Header text */
+  .dash-main h1 {
+    font-size: 1.7em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  /* Square container */
+  .dash-square {
+    width: 300px;
+    height: 300px;
+    background-color: #f0f4f8; /* Light blue-gray */
+    display: flex;
+    justify-content: center; /* Center button horizontally */
+    align-items: center; /* Center button vertically */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* App Name */
+.app-name {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Circular button */
+  .dash-circle-button {
+    width: 150px;
+    height: 150px;
+    background-color: #ff9f68; /* Orange */
+    border-radius: 50%; /* Circle shape */
+    border: none;
+    display: flex;
+    flex-direction: column; /* Stack text inside button */
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .dash-circle-button:hover {
+    transform: scale(1.1); /* Button enlarges on hover */
+    background-color: #ff7f3a; /* Slightly darker orange */
+  }
+  
+  .dash-days {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .dash-text {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  
+  /* Navbar */
+  .icon-bar {
+    width: 60px; /* Set a specific width */
+    background-color: #555; /* Dark-grey background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Stick to the left */
+  }
+  
+  .icon-bar a {
+    display: block; /* Make the links appear below each other instead of side-by-side */
+    text-align: center; /* Center-align text */
+    padding: 16px; /* Add some padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size:30px; /* Increased font-size */
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+  }
+  
+  .active {
+    background-color: #04aa6d; /* Add an active/current color */
+  }
