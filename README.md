@@ -60,19 +60,3 @@ Note: For production use, consider:
 ## Technology Stack:
 - HTML, CSS, and JavaScript: Used to build the user interface for a seamless and interactive experience.
 - AI Integration: Gemini API: Used to facilitate AI-driven interactions and insights.
-
-  Gemini API Usage:
-javascript
-
-// Import the required library:
-import { GoogleGenerativeAI } from "@google/generative-ai";
-
-// Initialize the Gemini API client with an API key:
-const genAI = new GoogleGenerativeAI("AIzaSyCyKzSO3W6PuilLfFxlkJaKMqMr7QWBDKA");
-
-// Define the prompt for AI interactions:
-const prompt1 = "You are a compassionate and professional AI therapist. Based on the user's journal entries and responses, provide insightful feedback and craft thoughtful, guiding questions to help the user gain deeper self-awareness and find emotional comfort.";
-
-// Send the prompt to the API and retrieve the response:
-const result = await genAI.generateContent(prompt1);
-console.log(result.response.text());
