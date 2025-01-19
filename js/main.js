@@ -1,3 +1,5 @@
+const chatInput = document.getElementById("messageInput");
+
 document.addEventListener('DOMContentLoaded', () => {
     const checkAI = setInterval(() => {
         if (window.genAI) {
