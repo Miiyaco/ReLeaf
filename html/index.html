@@ -14,9 +14,23 @@
 </head>
 
 <body>
-    <header class="app-name">
-        <h1>ReLeaf</h1>
+    <header class="app-header">
+        <div class="app-name">
+            <h1>ReLeaf</h1>
+        </div>
+        <div class="user-controls">
+            <span id="userDisplay" class="user-name"></span>
+            <div class="login-buttons">
+                <button id="loginButton" class="login-button">
+                    <i class="fa fa-user"></i>
+                </button>
+                <button id="logoutButton" class="logout-button" style="display: none;">
+                    <i class="fa fa-sign-out"></i>
+                </button>
+            </div>
+        </div>
     </header>
+<<<<<<< Updated upstream
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -29,12 +43,23 @@
 
     <!-- Use any element to open the sidenav -->
     <span class="menu-icon" onclick="openNav()"><i class="fa fa-bars"></i></span>
+=======
+    
+    <nav class="icon-bar">
+        <a class="active" href="#"><i class="fa fa-home"></i></a>
+        <a href="./journal.html"><i class="fa fa-book"></i></a>
+        <a href="./to-do.html"><i class="fa fa-check"></i></a>
+        <a href="./meditate.html"><i class="fa fa-heart"></i></a>
+        <a href="./chat.html"><i class="fa fa-comment"></i></a>
+    </nav>
+
+>>>>>>> Stashed changes
     <div class="dashboard">
         <div class="dash-main">
-            <h1>Welcome back // name // </h1>
+            <h1 id="welcomeMessage">Welcome back!</h1>
             <div class="dash-square">
-                <button class="dash-circle-button">
-                    <span class="dash-days"> X DAYS</span>
+                <button class="dash-circle-button floating">
+                    <span class="dash-days"><span id="streakCount">0</span> DAYS</span>
                     <span class="dash-text">I took care of myself</span>
                 </button>
             </div>
@@ -44,9 +69,12 @@
             </div>
         </div>
     </div>
+<<<<<<< Updated upstream
 
     <script src="../js/main.js"></script>
 
+=======
+>>>>>>> Stashed changes
 </body>
 
 </html>

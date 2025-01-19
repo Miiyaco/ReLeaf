@@ -8,6 +8,27 @@ body {
     background-color: #fffcf2;
 }
 
+/* Floating Animation */
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: translateY(0px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+
 @media (max-width: 668px) {
     h1 {
         font-size: 50px;
