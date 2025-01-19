@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../attachments/images/Releaf_Logo.png" type="./image/icon type" />
+
     <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body>
     <!-- Side Navigation -->
     <nav class="icon-bar">
         <a href="./index.html"><i class="fa fa-home"></i></a>
         <a href="./journal.html"><i class="fa fa-book"></i></a>
-        <a href="./meditation.html"><i class="fa fa-check"></i></a>
+        <a href="./meditate.html"><i class="fa fa-check"></i></a>
         <a href="./mood.html"><i class="fa fa-heart"></i></a>
         <a class="active" href="./chat.html"><i class="fa fa-comment"></i></a>
     </nav>
@@ -33,12 +37,21 @@
     </main>
 
     <script type="module">
-        import { GoogleGenerativeAI } from 'https://esm.run/@google/generative-ai';
-        import { getApiKey } from 'AIzaSyCyKzSO3W6PuilLfFxlkJaKMqMr7QWBDKA';
-        window.GoogleGenerativeAI = GoogleGenerativeAI;
-        window.genAI = new GoogleGenerativeAI(getApiKey());
+    import { GoogleGenerativeAI } from "https://cdn.jsdelivr.net/npm/@google/generative-ai/+esm";
+
+        // Ensure the API key is safely stored
+        const genAI = new GoogleGenerativeAI("AIzaSyCyKzSO3W6PuilLfFxlkJaKMqMr7QWBDKA");
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+        // Expose genAI globally
+        window.genAI = genAI;
+    
+        initializeChat(genAI);
     </script>
+    <script src="../js/main.js"></script>
+
     <script src="../js/chat.js"></script>
     <script src="../js/main.js"></script>
 </body>
+
 </html>
