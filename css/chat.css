@@ -7,6 +7,41 @@ body {
     margin: 0 auto;
     padding: 2rem;
 }
+/* Ensure the textarea has a fixed height */
+.chat-input-container textarea {
+    width: 100%;          /* Ensure it takes the full width */
+    height: 50px;         /* Set a fixed height */
+    resize: none;         /* Disable manual resizing */
+    border: 1px solid #ccc; /* Optional: add a border for clarity */
+    padding: 10px;        /* Add padding for better UX */
+    font-size: 16px;      /* Set font size for readability */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Prevent the input field from overflowing */
+.chat-input-container {
+    position: fixed;  /* Keep it fixed at the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;  /* Match your page background */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Style the send button */
+.primary-button {
+    width: 100%;
+    height: 50px;
+    background-color: #77a477;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.primary-button:hover {
+    background-color: #669966;
+}
 
 .content-wrapper {
     background-color: white;
