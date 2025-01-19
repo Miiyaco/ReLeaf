@@ -8,18 +8,22 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/stylesToDo.css">
     <link rel="icon" href="../attachments/images/Releaf_Logo.png" type="./image/icon type" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-    <!--
-    <nav class="icon-bar">
-        <a href="./index.html"><i class="fa fa-home"></i></a>
-        <a href="./journal.html"><i class="fa fa-book"></i></a>
-        <a class="active" href=#><i class="fa fa-check"></i></a>
-        <a href="#"><i class="fa fa-heart"></i></a>
-        <a href="#"><i class="fa fa-comment"></i></a>
-    </nav>
-    -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html"><i class="fa fa-home"> HOME</i></a>
+        <a href="./journal.html"><i class="fa fa-book"> JOURNAL</i></a>
+        <a class="active" href=#><i class="fa fa-check"></i> TO-DO</a>
+        <a href="./meditate.html"><i class="fa fa-heart"> MEDITATE</i></a>
+        <a href="./chat.html"><i class="fa fa-comment"></i> CHAT</a>
+      </div>
+      
+      <!-- Use any element to open the sidenav -->
+      <span class="menu-icon" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
     <div class="to-do-container">
         <div class="to-do-header">
@@ -36,6 +40,7 @@
         </ul>
     </div>
     <script src="../js/to-do.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

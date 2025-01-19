@@ -11,17 +11,22 @@
     <link rel="icon" href="../attachments/images/Releaf_Logo.png" type="./image/icon type" />
 
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/styles.css" />
+
 </head>
 
 <body>
-    <!-- Side Navigation -->
-    <nav class="icon-bar">
-        <a href="./index.html"><i class="fa fa-home"></i></a>
-        <a href="./journal.html"><i class="fa fa-book"></i></a>
-        <a href="./meditate.html"><i class="fa fa-check"></i></a>
-        <a href="./mood.html"><i class="fa fa-heart"></i></a>
-        <a class="active" href="./chat.html"><i class="fa fa-comment"></i></a>
-    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html"><i class="fa fa-home"> HOME</i></a>
+        <a href="./journal.html"><i class="fa fa-book"> JOURNAL</i></a>
+        <a href="./to-do.html"><i class="fa fa-check"></i> TO-DO</a>
+        <a href="./meditate.html"><i class="fa fa-heart"> MEDITATE</i></a>
+        <a class="active" href=#><i class="fa fa-comment"></i> CHAT</a>
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <span class="menu-icon" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
     <main id="main-content">
         <div class="content-wrapper">
@@ -37,7 +42,7 @@
     </main>
 
     <script type="module">
-    import { GoogleGenerativeAI } from "https://cdn.jsdelivr.net/npm/@google/generative-ai/+esm";
+        import { GoogleGenerativeAI } from "https://cdn.jsdelivr.net/npm/@google/generative-ai/+esm";
 
         // Ensure the API key is safely stored
         const genAI = new GoogleGenerativeAI("AIzaSyCyKzSO3W6PuilLfFxlkJaKMqMr7QWBDKA");
@@ -45,7 +50,7 @@
 
         // Expose genAI globally
         window.genAI = genAI;
-    
+
         initializeChat(genAI);
     </script>
     <script src="../js/main.js"></script>
