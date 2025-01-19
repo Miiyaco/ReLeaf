@@ -1,99 +1,3 @@
-/* Global styles */
-:root {
-    --primary-color: #4CAF50;
-    --text-color: #333;
-    --background-color: #f5f5f5;
-    --sidebar-width: 250px;
-    --sidebar-collapsed-width: 60px;
-    --transition-speed: 0.3s;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-/* Main content styles */
-.main-content {
-    margin-left: var(--sidebar-width);
-    padding: 2rem;
-    transition: margin-left var(--transition-speed) ease;
-}
-
-.sidebar.collapsed + .main-content {
-    margin-left: var(--sidebar-collapsed-width);
-}
-
-/* Dashboard styles */
-.dash-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.dash-circle {
-    width: 300px;
-    height: 300px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.dash-circle h1 {
-    margin: 0;
-    font-size: 3rem;
-}
-
-.dash-circle p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
-}
-
-.dash-quote {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-    text-align: center;
-}
-
-.quote-content {
-    margin-bottom: 1rem;
-}
-
-#quote {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin: 0 0 0.5rem;
-    color: var(--text-color);
-}
-
-#author {
-    font-weight: bold;
-    margin: 0;
-    color: var(--primary-color);
-}
-
-.quote-date {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 1rem;
-    border-top: 1px solid #eee;
-    padding-top: 1rem;
-}
-
 /* Main container */
 .dashboard {
     display: flex; /* Flexbox for sidebar and main content */
@@ -123,25 +27,26 @@ body {
   .dash-square {
     width: 300px;
     height: 300px;
+    background-color: #f0f4f8; /* Light blue-gray */
     display: flex;
     justify-content: center; /* Center button horizontally */
     align-items: center; /* Center button vertically */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   /* App Name */
 .app-name {
-    color: #f1f1f1;
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
-    font-family: Lucida Sans, Lucida Sans Regular, Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif;
   }
   
   /* Circular button */
   .dash-circle-button {
-    width: 250px;
-    height: 250px;
-    background-color: #a8ab69; 
+    width: 150px;
+    height: 150px;
+    background-color: #ff9f68; /* Orange */
     border-radius: 50%; /* Circle shape */
     border: none;
     display: flex;
@@ -157,10 +62,9 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
-  
   .dash-circle-button:hover {
     transform: scale(1.1); /* Button enlarges on hover */
-    background-color: #507229; /* Slightly darker orange */
+    background-color: #ff7f3a; /* Slightly darker orange */
   }
   
   .dash-days {
@@ -173,7 +77,6 @@ body {
     font-weight: normal;
   }
   
-<<<<<<< Updated upstream
 /* Side navigation styles */
 .sidenav {
   height: 100%;
@@ -228,183 +131,4 @@ body {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-=======
-  /* Navbar */
-  .icon-bar {
-    width: 60px; /* Set a specific width */
-    background-color: #555; /* Dark-grey background */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed; /* Stick to the left */
-  }
-  
-  .icon-bar a {
-    display: block; /* Make the links appear below each other instead of side-by-side */
-    text-align: center; /* Center-align text */
-    padding: 16px; /* Add some padding */
-    transition: all 0.3s ease; /* Add transition for hover effects */
-    color: white; /* White text color */
-    font-size:30px; /* Increased font-size */
-  }
-  
-  .icon-bar a:hover {
-    background-color: #000; /* Add a hover color */
-  }
-  
-  .active {
-    background-color: #04aa6d; /* Add an active/current color */
-  }
-
-/* Header and User Controls */
-.app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3b552f;
-}
-
-.user-controls {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.user-name {
-    font-weight: 600;
-    color: #4a5568;
-}
-
-.login-buttons {
-    margin-right: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.login-button, .logout-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.login-button:hover, .logout-button:hover {
-    background-color: #45a049;
-}
-
-.logout-button {
-    background-color: #45a049;
-}
-
-.logout-button:hover {
-    background-color: #45a049;
-}
-
-/* Floating Animation */
-@keyframes floating {
-    0% {
-        transform: translateY(0px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-    50% {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-    }
-    100% {
-        transform: translateY(0px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-}
-
-.floating {
-    animation: floating 3s ease-in-out infinite;
-}
-
-/* Login Form Styles */
-.login-container {
-    max-width: 400px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.login-container h2 {
-    text-align: center;
-    color: #2d3748;
-    margin-bottom: 1.5rem;
-}
-
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.form-group label {
-    font-weight: 600;
-    color: #4a5568;
-}
-
-.form-group input {
-    padding: 0.75rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-}
-
-.form-group input:focus {
-    outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
-}
-
-.form-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.form-buttons button {
-    flex: 1;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#loginSubmit {
-    background-color: #4CAF50;
-    color: white;
-}
-
-#loginSubmit:hover {
-    background-color: #45a049;
-}
-
-#registerButton {
-    background-color: #2196F3;
-    color: white;
-}
-
-#registerButton:hover {
-    background-color: #1e88e5;
->>>>>>> Stashed changes
 }
