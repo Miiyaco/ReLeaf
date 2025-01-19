@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReLeaf - Chat</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <!-- Side Navigation -->
+    <nav class="icon-bar">
+        <a href="./index.html"><i class="fa fa-home"></i></a>
+        <a href="./journal.html"><i class="fa fa-book"></i></a>
+        <a href="./meditation.html"><i class="fa fa-check"></i></a>
+        <a href="./mood.html"><i class="fa fa-heart"></i></a>
+        <a class="active" href="./chat.html"><i class="fa fa-comment"></i></a>
+    </nav>
+
+    <main id="main-content">
+        <div class="content-wrapper">
+            <h2>Chat with AI</h2>
+            <div class="chat-container">
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="chat-input-container">
+                    <textarea id="chatInput" placeholder="Type your message..."></textarea>
+                    <button id="sendMessage" class="primary-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        import { GoogleGenerativeAI } from 'https://esm.run/@google/generative-ai';
+        import { getApiKey } from 'AIzaSyCyKzSO3W6PuilLfFxlkJaKMqMr7QWBDKA';
+        window.GoogleGenerativeAI = GoogleGenerativeAI;
+        window.genAI = new GoogleGenerativeAI(getApiKey());
+    </script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

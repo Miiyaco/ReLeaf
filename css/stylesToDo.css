@@ -1,0 +1,81 @@
+/* TO-DO */
+body{
+    background: lightblue;
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .to-do-container {
+    background: #fff;
+    padding: 25px;
+    width: 90%; /* Make it responsive */
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+  .to-do-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size: 1.1em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+
+  .to-do-header img{
+    margin-left: 10px;
+  }
+
+  .to-do-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Prevent content overflow */
+    padding: 5px 10px; /* Add padding for better spacing */
+  }
+
+  .to-do-body input{
+    flex: 1; /* Make the input take remaining space */
+    border: none;
+    outline: none;
+    background: transparent;
+    text-align: left;
+    font-size: 20px;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 1.4em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .to-do-body img{
+    cursor: pointer;
+    height: auto;
+    width: 40px;
+    padding: 15px;
+    background: lightgreen;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.2s;
+  }
+
+  .task-list li {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: space-between; /* Spread content evenly */
+    overflow-wrap: break-word; /* Break long words */
+}
