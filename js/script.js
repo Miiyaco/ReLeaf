@@ -3,7 +3,7 @@ console.log(window);
 // Function to display a random quote
 function displayRandomQuote() {
 
-  const randomIndex = Math.floor(Math.random() * window.quotes.length());
+  const randomIndex = Math.floor(Math.random() * window.quotes.length);
   const randomQuote = window.quotes[randomIndex];
 
   document.getElementById("quote").textContent = `"${randomQuote.text}"`;
