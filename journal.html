@@ -8,13 +8,15 @@
     <script src="./journal.js"></script>
 </head>
 <body>
-    <div class="header">
-        <h1>Your Mindfulness Journal</h1>
-        <button id="addEntry">Add Entry</button>
-    </div>
+    <h1>Your Mindfulness Journal</h1>
 
     <div class="container">
-        <p>Previous Entries</p>
+        <form action="" method="post">
+            <textarea id="newEntry" name="entry" required>Enter reflections here</textarea>
+            <button type="submit">Submit</button>
+        </form>
     </div>
+
+    <button id="viewEntries">View Entries</button>
 </body>
 </html>
