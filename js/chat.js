@@ -1,3 +1,4 @@
+
 // Chat functionality
 function initializeChat(genAI) {
     const chatMessages = document.getElementById('chatMessages');
@@ -41,20 +42,20 @@ Note: You should talk in a casual tone and make it easy for them to respond. Res
             const result = await model.generateContent(prompt);
             const response = await result.response;
             appendMessage(response.text(), 'ai');
-        } catch (error) {
+      } catch (error) {
             console.error('Error in chat:', error);
             appendMessage('I apologize, but I encountered an error. Please try again.', 'ai');
-        } finally {
-            sendMessage.disabled = false;
+      } finally {
+        sendMessage.disabled = false;
             sendMessage.textContent = 'Send';
-        }
+      }
     }
-
+  
     sendMessage.addEventListener('click', handleSendMessage);
     chatInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            handleSendMessage();
-        }
+        e.preventDefault();
+        handleSendMessage();
+      }
     });
-}
+  }
