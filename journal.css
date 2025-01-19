@@ -1,0 +1,14 @@
+body {
+    background-color: #808F7C;
+}
+
+#addEntry {
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    background-color: aqua;
+}
+
+#addEntry:hover {
+    transform: scale(1.1);
+}
