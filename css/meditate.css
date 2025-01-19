@@ -4,6 +4,10 @@ h1 {
     font-size: 2.6em;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: #fffcf2;
     padding: 2rem;
@@ -45,6 +49,10 @@ a {
     display: contents;
     text-decoration: none;
     margin: 0;
+}
+
+.app-name {
+    align-items: center;
 }
 
 .container {

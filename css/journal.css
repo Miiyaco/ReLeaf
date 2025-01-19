@@ -13,6 +13,10 @@ h1 {
     color: var(--primary-color);
 }
 
+a{
+    text-decoration: none;
+}
+
 #addEntry {
     height: 40px;
     width: 120px;
@@ -72,7 +76,7 @@ h1 {
 
 button {
     height: 40px;
-    width: 120px;
+    width: 180px;
     border-radius: 20px;
     background-color: #808F7C;
     border: 0px;
