@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault(); // Prevent form submission reload
 
     const content = newEntryInput.value.trim();
-    if (!content || content === "Enter reflections here") {
+    if (!content) {
       alert("Please write something to save!");
       return;
     }
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("journalEntries", JSON.stringify(entries));
 
     // Reset textarea and notify the user
-    newEntryInput.value = "Enter reflections here";
+    newEntryInput.value = "";
     alert("Entry saved!");
   };
 
