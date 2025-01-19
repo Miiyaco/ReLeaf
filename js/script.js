@@ -1,19 +1,18 @@
-async function fetchDailyQuote() {
-    try {
-      const response = await fetch("https://zenquotes.io/api/random"); // Proxying the API request
-      var data = await response.json();
-      console.log(data);
-      // Display the quote and author
-      document.querySelector(".quote").textContent = `"${data[0].q}" — ${data[0].a}`;
-    } catch (error) {
-      console.error("Error fetching quote:", error);
-  
-      // Fallback quote in case of an error
-      document.querySelector(".quote").textContent =
-        "An inspiring quote will appear here soon.";
-    }
-  }
-  
-  // Fetch the quote on page load
-  window.onload = fetchDailyQuote;
+const { quotes } = window;
+console.log(window);
+// Function to display a random quote
+function displayRandomQuote() {
+
+  const randomIndex = Math.floor(Math.random() * window.quotes.length());
+  const randomQuote = window.quotes[randomIndex];
+
+  document.getElementById("quote").textContent = `"${randomQuote.text}"`;
+  document.getElementById("author").textContent = `- ${randomQuote.author}`;
+}
+
+// Display a random quote when the page loads
+document.addEventListener("DOMContentLoaded", displayRandomQuote);
+
+// Display a random quote when the page loads
+document.addEventListener("DOMContentLoaded", displayRandomQuote);
   
